@@ -6,13 +6,13 @@ public class InsertionSort {
 
 	public static void sort(int arr[]) {
 
-		int i, j, temp; // 6 75 44 1 8 55
+		int i, j, temp;
 		for (i = 1; i < arr.length; i++) {
 			j = i; 
 			temp = arr[i];
 			while (j > 0 && temp < arr[j - 1]) {
 				arr[j] = arr[j - 1];
-				j--; // j =0
+				j--;
 			}
 			arr[j] = temp;
 		}
