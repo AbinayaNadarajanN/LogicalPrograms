@@ -1,0 +1,36 @@
+package logics;
+
+public class StringToArray {
+
+	public static void main(String[] args) {
+
+		String s1 = "abinaya12";
+		String s2 = "jenifer23";
+		String s3 = s1 + s2;
+
+		int j = 0;
+		char[] arr = new char[s3.length()];
+
+		for (int i = 0; i < s3.length(); i++) {
+			char c = s3.charAt(i);
+			int charCode = c;
+
+			if (charCode >= 48 && charCode <= 57) // 0 to 9 ASCII
+				continue;
+			else {
+				arr[j] = s3.charAt(i);
+				j++;
+			}
+		}
+
+		for (int i = 0; i < j; i++) {
+			if (i == 0)
+				System.out.print("[" + arr[i] + ",");
+			else if (i == j - 1)
+				System.out.print(arr[i] + "]");
+			else
+				System.out.print(arr[i] + ",");
+		}
+	}
+
+}
