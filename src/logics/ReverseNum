@@ -1,0 +1,26 @@
+package logics;
+
+import java.util.Scanner;
+
+public class ReverseNum {
+	public static void main(String[] args){
+		int r = 0;
+
+		System.out.println("Enter the value to reverse:");
+		Scanner s = new Scanner(System.in);
+		int i = s.nextInt();
+		s.close();
+
+		while (i > 0) {
+
+			r = r * 10;
+			r = r + i % 10;
+			i = i / 10;
+
+		}
+
+		System.out.println(r);
+
+	}
+
+}
