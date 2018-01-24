@@ -1,0 +1,23 @@
+package logics;
+
+public class ReverseString {
+
+	public static void main(String[] args) {
+
+		String name = "Science";
+		int length = name.length();
+		char[] arr = new char[length];
+		char[] temp = new char[length];
+
+		for (int i = 0; i < length; i++) {
+			arr[i] = name.charAt(i);
+
+		}
+		for (int j = 0; j < length; j++) {
+			temp[j] = arr[length - 1 - j];
+		}
+		String reverse = new String(temp);
+		System.out.println(reverse);
+	}
+
+}
