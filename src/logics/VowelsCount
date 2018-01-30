@@ -1,0 +1,24 @@
+package logics;
+
+import java.util.Scanner;
+
+public class CountOfVowels {
+
+	public static void main(String[] args) {
+		int vowelsCount = 0;
+		System.out.println("Enter the string to count:");
+		Scanner sc = new Scanner(System.in);
+		String str = sc.nextLine();
+		int len = str.length();
+
+		for (int i = 0; i < len - 1; i++) {
+			char ch = str.charAt(i);
+			if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+				vowelsCount++;
+			}
+		}
+		System.out.println(vowelsCount);
+		sc.close();
+	}
+
+}
