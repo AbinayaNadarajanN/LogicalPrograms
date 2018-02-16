@@ -1,0 +1,29 @@
+package logics;
+
+import java.util.Scanner;
+
+public class IsPrimeOrNot {
+
+	public static void main(String args[]) {
+
+		boolean isPrime = true;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter any number:");
+		int temp;
+		int number = sc.nextInt();
+		sc.close();
+		for (int i = 2; i <= number / 2; i++) {
+			temp = number % i;
+			if (temp == 0) {
+				isPrime = false;
+				break;
+			}
+		}
+
+		if (isPrime)
+			System.out.println(number + " is a Prime Number");
+		else
+			System.out.println(number + " is not a Prime Number");
+	}
+	
+}
