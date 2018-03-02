@@ -1,0 +1,22 @@
+package logics;
+
+import java.util.Scanner;
+
+public class Fibonacci {
+	public static void main(String a[]){
+        System.out.println("Enter the number to find fibonacci series:");
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+       
+        int[] arr = new int[num];
+        arr[0] = 0;
+        arr[1] = 1;
+        for(int i=2; i < num; i++){
+            arr[i] = arr[i-1] + arr[i-2];
+        }
+
+        for(int i=0; i< num; i++){
+                System.out.println(arr[i] + " ");
+        }
+   }
+}
