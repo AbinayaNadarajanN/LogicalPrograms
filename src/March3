@@ -1,0 +1,36 @@
+package logics;
+
+import java.util.Scanner;
+
+class IsArmstrongOrNot {
+	public static void main(String[] args) {
+
+		System.out.println("Enter a 3 digit number to find is Armstrong or not ");
+		Scanner sc = new Scanner(System.in);
+		int num = sc.nextInt();
+
+		if (isArmstrongOrNot(num)) {
+
+			System.out.println("This number " + num + " is an armstrong number");
+
+		} else {
+			System.out.println("This number " + num + " is not an armstrong number");
+		}
+
+	}
+
+	private static boolean isArmstrongOrNot(int num) {
+		int result = 0;
+		int originalNum = num;
+		while (num != 0) {
+			int remainder = num % 10;
+			result = result + remainder * remainder * remainder;
+			num = num / 10;
+		}
+		if (originalNum == result) {
+			return true;
+		}
+		return false;
+	}
+
+}
